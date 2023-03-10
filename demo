@@ -5,7 +5,8 @@ pipeline {
             agent { label 'gol'}
         steps{
             sh'''
-            pwd
+            ls
+            mvn package
             ls
             '''
         }

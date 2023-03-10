@@ -6,6 +6,8 @@ pipeline {
         steps{
             sh'''
             ls
+            java -version
+            mvn -version
             mvn package
             ls
             '''

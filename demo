@@ -1,0 +1,25 @@
+pipeline {
+    agent { label 'gol'}
+    stages {
+        stage('git') {
+            agent { label 'gol'}
+        steps{
+            sh'''
+            pwd
+            ls
+            '''
+        }
+        }
+        stage('mvn_package') {
+            agent {
+                label 'gol1'
+            }
+        steps{
+            sh'''
+            pwd
+            ls
+            '''
+        }
+        }    
+    }
+}

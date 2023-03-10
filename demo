@@ -3,6 +3,9 @@ pipeline {
     stages {
         stage('git') {
             agent { label 'gol'}
+            environment {
+                PATH = "/usr/lib/jvm/java-11-openjdk-amd64/bin/:$PATH" 
+            }
         steps{
             sh'''
             ls
